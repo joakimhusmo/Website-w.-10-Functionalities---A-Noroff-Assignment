@@ -6,11 +6,11 @@
 
 export function extractMiddleString() {
     const text = prompt("Provide string containing at least 5 characters.")
-    if(text.length <= 5) {  
+    if(text.length < 5) {   // replaced `<=` with `<`
         alert("Wrong data");
         return;
     }
-    const startIndex = text.length / 2;
-    const length = Math.round(text.length / 4);
-    alert(text.split(startIndex - length, startIndex + length + text.length % 2));  
+    const startIndex = text.length / 2;     // find middle 
+    const length = Math.round(text.length / 4); // find side
+    alert(text.slice(startIndex - length, startIndex + length + text.length % 2));  // replaced `splice` with `slice` 
 }

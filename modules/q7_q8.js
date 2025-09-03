@@ -11,9 +11,11 @@
 
 
 const spliceText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare mauris eget tortor accumsan posuere. Mauris pharetra pellentesque libero, ut cursus eros consectetur nec. Suspendisse id erat vitae tellus cursus rutrum ut sit amet nisi. Aliquam cursus ultrices nisl in vestibulum. Nunc lacinia metus a venenatis pretium. Nullam vitae tincidunt ante. Duis posuere, dolor ac accumsan consequat, ex mi congue sem, sit amet fringilla tellus velit at neque. Donec luctus mi eu ligula volutpat semper. Maecenas vulputate bibendum velit, at finibus velit consectetur sed. Maecenas commodo feugiat lorem, vitae eleifend velit iaculis ut. Duis ac suscipit nisl. Sed vel metus.";
+
 spliceText = spliceText.replace(/\./g, '');
 spliceText = spliceText.replace(/\,/g, '');
-function spliceExample() {
+
+export function spliceExample() {
     //text from: https://www.lipsum.com/ - 100 words
     const array = spliceText.split(",");    
     console.log(array);
@@ -38,7 +40,7 @@ function spliceExample() {
 // Then convert the ‘splicedText’ from task 7 to an array. Using the map() method, add the user text to the end of every word in the string variable and convert it back to a string. The new string should be logged to the console.
 
 
-function iteratorMethods() {
+export function iteratorMethods() {
     const toAdd = prompt("Specify the text to add to each element of the current string")
     let array = spliceText.split("");   
     array = array.map( x = x + toAdd); 

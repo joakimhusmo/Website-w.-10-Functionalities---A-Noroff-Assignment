@@ -21,3 +21,8 @@ window.ifExample = ifExample;
 // Question 6 imported
 import { switchExample } from "./q6_switchExample.js";
 window.switchExample = switchExample;
+
+// Question 7 and Question 8
+import { spliceExample, iteratorMethods } from "./q7_q8.js";
+window.spliceExample = spliceExample;
+window.iteratorMethods = iteratorMethods; 

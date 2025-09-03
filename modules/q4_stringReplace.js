@@ -6,7 +6,7 @@
 // The resulting string should be shown to the user in an alert
 
 export function stringReplace() {
-    const text = parseInt(prompt("Provide string containing at least 5 characters."));    
+    let text = prompt("Provide string containing at least 5 characters."); // Replace `const` w. `let`; remove `parseInt`     
     text = text.replace(/a/ig, '@').replace(/e/ig, '3').replace(/o/ig, '0');
-    console.log(text);  
+    alert(text); // Replace `console.log` w. `alert`
 }

@@ -3,11 +3,11 @@
 
     export function switchExample() {
     const number = parseInt(prompt("Please provide a number from 1 to 5"));
-    if(!isNaN(number) || number < 1 || number > 5) {    
+    if(isNaN(number) || number < 1 || number > 5) { // Replace `!isNaN` w. `isNaN`
         alert("Wrong data");
         return;
     }
-    switch(global) { 
+    switch(number) { // Replace `global` w. `number` 
         case 1:
             alert("Your favourite number is 1. It means you probably always want to win everything!")
             break;            

@@ -9,3 +9,7 @@ window.addTwoNumbers = addTwoNumbers;
 // Question 3 imported
 import { extractMiddleString } from "./q3_extractMiddleString.js";
 window.extractMiddleString = extractMiddleString; 
+
+// Question 4 imported
+import { stringReplace } from "./q4_stringReplace.js";
+window.stringReplace = stringReplace;

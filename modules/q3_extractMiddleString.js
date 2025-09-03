@@ -4,7 +4,7 @@
 //      For entry “sting” – “tin” (because 5 / 2 = 2.5 ~ 3 and because the entry has an odd length, we have achieved the symmetry)
 //      For entry “123456789” – “34567” (because 9/2 = 4.5~5, the middle character of the string is 5, and both strings have the same middle character which is what we want to achieve)
 
-function extractMiddleString() {
+export function extractMiddleString() {
     const text = prompt("Provide string containing at least 5 characters.")
     if(text.length <= 5) {  
         alert("Wrong data");

@@ -5,7 +5,7 @@
 // Otherwise, show an alert to indicate that we still don’t know their age.
 
 
-function ifExample() {
+export function ifExample() {
     const age = parseInt(prompt("How old are you?"));
     if(isNaN(age) || age > 1){  
         if(confirm("Are you sure that your age is: " + age + "?")) {

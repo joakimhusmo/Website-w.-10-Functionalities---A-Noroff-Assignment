@@ -13,3 +13,7 @@ window.extractMiddleString = extractMiddleString;
 // Question 4 imported
 import { stringReplace } from "./q4_stringReplace.js";
 window.stringReplace = stringReplace;
+
+// Question 5 imported
+import { ifExample } from "./q5_ifExample.js";
+window.ifExample = ifExample;

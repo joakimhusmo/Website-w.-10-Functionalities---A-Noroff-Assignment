@@ -2,10 +2,15 @@
 // You should check if both inputs are proper numbers. If they are not, instead show an alert that the data is not in the correct format.
 
 export function addTwoNumbers() {
-    let num1 = prompt("Provide the first number:");   
-    let num2 = prompt("Provide the second number:");    
-    if(isNaN(num1) || isNaN(num2)) {        
-        alert("The final score is: ", (num1+num2));   
+
+    let num1 = parseInt(prompt("Provide the first number:"));   // add parseInt() method   
+    let num2 = parseInt(prompt("Provide the second number:"));  // add parseInt() method
+
+    let result;                         // add `result` variable
+
+    if (!isNaN(num1) && !isNaN(num2)) { // adjust from `isNaN` to `!isNaN`
+        result = num1 + num2;           // store & update `result` variable
+        alert("The final score is: " + result);     // adjust alert from `, (num1+num2)` to `+ result`   
     }
     else {
         alert("Wrong data");

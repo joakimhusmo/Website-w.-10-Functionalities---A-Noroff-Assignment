@@ -6,13 +6,15 @@
 
 
 export function ifExample() {
-    const age = parseInt(prompt("How old are you?"));
-    if(isNaN(age) || age > 1){  
-        if(confirm("Are you sure that your age is: " + age + "?")) {
-        } else if(confirm("Definitely?")) {    
-                alert("Your age is " + age + "!");
+    const age = parseInt(prompt("How old are you?"));                  
+    if(!isNaN(age) && age > 1) {        // Replace `isNaN`/`||` w. `!isNaN`/`&&`                                        
+        if(confirm("Are you sure that your age is: " + age + "?")) {    
+            if (confirm("Definitely?")) { // Replace `else if` w. `if`
+                alert("Your age is " + age + "!")
                 return;
-        }
+            }
+        }            
+    } else {    // add `else` statement
+        alert("I still don't know your age :(");
     }
-    alert("I still don't know your age :(");    
 }

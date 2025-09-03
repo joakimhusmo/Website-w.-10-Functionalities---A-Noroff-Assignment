@@ -17,3 +17,7 @@ window.stringReplace = stringReplace;
 // Question 5 imported
 import { ifExample } from "./q5_ifExample.js";
 window.ifExample = ifExample;
+
+// Question 6 imported
+import { switchExample } from "./q6_switchExample.js";
+window.switchExample = switchExample;

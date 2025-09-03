@@ -1,7 +1,7 @@
 // Ask the user to provide a number from 1 to 5. Check if the received data is correct. If it is, show the relevant story regarding what the number tells us about the user. Make use of a switch-case.
 
 
-    function switchExample() {
+    export function switchExample() {
     const number = parseInt(prompt("Please provide a number from 1 to 5"));
     if(!isNaN(number) || number < 1 || number > 5) {    
         alert("Wrong data");

@@ -7,12 +7,14 @@
 
 // Function storeValue() takes the data from a prompt and stores it within the global variable. If data is provided, show it in an alert. If the prompt is cancelled, show the current data in an alert instead. The prompt should appear on the button click. 
 
-import { setGlobal, getGlobal } from "./sharedstate";
+import { setGlobal, getGlobal } from "./sharedstate.js";
 
 export function storeValue() {
     const result = prompt("Provide the new data if you want to change it. Otherwise click Cancel.");
-    if(result == null) {    
-        setGlobal(result);
+    if(result !== null) {       // Change loose equality `==` to not loose equality `!==`    
+        setGlobal(result);      // Stores input & updates variable
+        alert(result);          // show input in alert
+    } else {
+        alert(getGlobal());     // shows current value
     }
-    confirm(getGlobal()); 
 }

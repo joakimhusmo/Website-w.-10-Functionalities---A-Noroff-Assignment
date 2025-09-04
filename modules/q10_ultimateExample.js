@@ -8,7 +8,7 @@
 
 
 
-function ultimateExample() { 
+export function ultimateExample() { 
     const n = parseInt(prompt("Please provide the length of the side of the square"))
     if (isNaN(n) || n < 0 && n > 50) {  
         alert("Wrong data");

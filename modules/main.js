@@ -30,3 +30,7 @@ window.iteratorMethods = iteratorMethods;
 // Question 9
 import { infiniteLoop } from "./q9_infiniteLoop.js";
 window.infiniteLoop = infiniteLoop;
+
+// Question 10
+import { ultimateExample } from "./q10_ultimateExample.js";
+window.ultimateExample = ultimateExample; 

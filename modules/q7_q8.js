@@ -10,26 +10,30 @@
 // We can see that the first appearance is the word “Lorem”. We remove the two words “ipsum” and “dolor” that followed “Lorem”. Then we added a copy of the word “Lorem” word.
 
 
-const spliceText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare mauris eget tortor accumsan posuere. Mauris pharetra pellentesque libero, ut cursus eros consectetur nec. Suspendisse id erat vitae tellus cursus rutrum ut sit amet nisi. Aliquam cursus ultrices nisl in vestibulum. Nunc lacinia metus a venenatis pretium. Nullam vitae tincidunt ante. Duis posuere, dolor ac accumsan consequat, ex mi congue sem, sit amet fringilla tellus velit at neque. Donec luctus mi eu ligula volutpat semper. Maecenas vulputate bibendum velit, at finibus velit consectetur sed. Maecenas commodo feugiat lorem, vitae eleifend velit iaculis ut. Duis ac suscipit nisl. Sed vel metus.";
+// Replace `const` with `let`
+let spliceText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare mauris eget tortor accumsan posuere. Mauris pharetra pellentesque libero, ut cursus eros consectetur nec. Suspendisse id erat vitae tellus cursus rutrum ut sit amet nisi. Aliquam cursus ultrices nisl in vestibulum. Nunc lacinia metus a venenatis pretium. Nullam vitae tincidunt ante. Duis posuere, dolor ac accumsan consequat, ex mi congue sem, sit amet fringilla tellus velit at neque. Donec luctus mi eu ligula volutpat semper. Maecenas vulputate bibendum velit, at finibus velit consectetur sed. Maecenas commodo feugiat lorem, vitae eleifend velit iaculis ut. Duis ac suscipit nisl. Sed vel metus.";
 
-spliceText = spliceText.replace(/\./g, '');
-spliceText = spliceText.replace(/\,/g, '');
+spliceText = spliceText.replace(/[.,]/g, ''); // Merge varibles; remove commas and dots
 
 export function spliceExample() {
     //text from: https://www.lipsum.com/ - 100 words
-    const array = spliceText.split(",");    
+    const array = spliceText.split(" "); // Remove `,` and split by spaces
     console.log(array);
+
     const length = parseInt(prompt("Specify the word's length:"));
-    if(isNaN(length) && length <= 0) {  
+    if(isNaN(length) || length <= 0 ) { // Replace `&&` w. `||`
         alert("Wrong length");
         return;
     }
-    const index = array.find(x => x.length == length);  
+
+    const index = array.findIndex(x => x.length === length); // Replace `.find` (word) with `.findIndex` (index)
+
     if(index >= 0) {
-        const element = array[index];
-        array.splice(index + 1, 2, element);
-        console.log(array);
+        const element = array[index];  // Place prompt within `element`
+        array.splice(index + 1, 2, element)
+        console.log(array); 
         spliceText = array.join(" ");
+        console.log(spliceText); 
     }
 }
 
@@ -41,9 +45,12 @@ export function spliceExample() {
 
 
 export function iteratorMethods() {
-    const toAdd = prompt("Specify the text to add to each element of the current string")
-    let array = spliceText.split("");   
-    array = array.map( x = x + toAdd); 
-    spliceText = array(" ");
-    console.log(spliceText);
+    const toAdd = prompt("Specify the text to add to each element of the current string") // input
+    console.log(toAdd);                             // input 👌
+    let array = spliceText.split(" ");              // string -> array
+    console.log(array);                             // array 👌
+    array = array.map( x => x + toAdd);             // input -> array
+    console.log(array);                             // array + input 👌
+    spliceText = array.join(" ");                   // Add `.join`; array -> string
+    console.log(spliceText);                        // string 👌
 }

@@ -26,3 +26,7 @@ window.switchExample = switchExample;
 import { spliceExample, iteratorMethods } from "./q7_q8.js";
 window.spliceExample = spliceExample;
 window.iteratorMethods = iteratorMethods; 
+
+// Question 9
+import { infiniteLoop } from "./q9_infiniteLoop.js";
+window.infiniteLoop = infiniteLoop;
